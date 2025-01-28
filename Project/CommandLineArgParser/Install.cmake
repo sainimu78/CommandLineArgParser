@@ -1,1 +1,1 @@
-include(${c_RootCMakeProjectFrameworkDirPath}/InstallHeaders.cmake)
+include(${c_RootCMakeProjectFrameworkDirPath}/InstallHeader.cmake)
