@@ -139,7 +139,7 @@ namespace CommandLine
 R"(The 'Requirement Type' of an Argument includes the following types:
 - Optional:			Specifying the argument is optional.
 - Required:			Specifying The argument is required.
-- Specified at one least:	Specifying at least one of the argument is required.
+- Specified at least one:	Specifying at least one of the argument is required.
 - Multiple optional:		Specifying one or more of the argument is optional.)");
 						this->SetParsingAcceptedHelpTypeArgs();
 					}));
