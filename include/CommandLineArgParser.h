@@ -145,11 +145,24 @@ R"(The 'Requirement Type' of an Argument includes the following types:
 					}));
 			m_intrinsicArgsCount++;
 		}
-		void RegisterDefaultHelps(const std::string& example)
+		void RegisterHelpVersion(uint32 major, uint32 minor, uint32 patch)
+		{
+			this->Register("--version", CArgDefinition()
+				.SetDescription("Version in format of Major.Minor.Patch")
+				.SetNoValue()
+				.SetOnFoundArgFunc([&, major, minor, patch]
+					{
+						printf("Version: %u.%u.%u", major, minor, patch);
+						this->SetParsingAcceptedHelpTypeArgs();
+					}));
+			m_intrinsicArgsCount++;
+		}
+		void RegisterDefaultHelps(const std::string& example, uint32 versionMajor, uint32 versionMinor, uint32 versionPatch)
 		{
 			this->RegisterHelp();
 			this->RegisterHelpExampleUsage(example);
 			this->RegisterHelpRequirementType();
+			this->RegisterHelpVersion(versionMajor, versionMinor, versionPatch);
 		}
 		bool Parse()
 		{
