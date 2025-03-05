@@ -13,3 +13,4 @@ include(${c_ProjectDirPath}/Install.cmake)
 
 include(${c_RootCMakeProjectFrameworkDirPath}/Release.cmake)
 include(${c_RootCMakeProjectFrameworkDirPath}/Cleanup.cmake)
+include(${c_RootCMakeProjectFrameworkDirPath}/GenerateReleaseNotes.cmake)
