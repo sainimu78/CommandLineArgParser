@@ -204,7 +204,10 @@ R"(The 'Requirement Type' of an Argument includes the following types:
 				if (!m_parsingIsAcceptedHelpTypeArgs)
 				{
 					if (!this->CheckForRequirements())
+					{
+						assert(false);
 						isValidInvocation = false;
+					}
 				}
 			}
 			else
