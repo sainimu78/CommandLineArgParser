@@ -196,6 +196,7 @@ R"(The 'Requirement Type' of an Argument includes the following types:
 						}
 						else
 						{
+							isValidInvocation = false;
 							printf("Unknown arg: %s\n", pszV);
 							this->SuggestArgs(pszV);
 						}
