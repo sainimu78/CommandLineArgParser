@@ -205,10 +205,7 @@ R"(The 'Requirement Type' of an Argument includes the following types:
 				if (!m_parsingIsAcceptedHelpTypeArgs)
 				{
 					if (!this->CheckForRequirements())
-					{
-						assert(false);
 						isValidInvocation = false;
-					}
 				}
 			}
 			else
@@ -257,28 +254,6 @@ R"(The 'Requirement Type' of an Argument includes the following types:
 			}
 			return false;
 		}
-		//const int32& GetArgC() const
-		//{
-		//	return m_argc;
-		//}
-		//const char* const* const& GetArgV() const
-		//{
-		//	return m_argv;
-		//}
-		//const CCommandLineArg* const& GetParsingArg() const
-		//{
-		//	assert(m_parsingArg != NULL);
-		//	return m_parsingArg;
-		//}
-		//const int32& GetParsingIndex() const
-		//{
-		//	assert(m_parsingIdx != InvalidIdx);
-		//	return m_parsingIdx;
-		//}
-		//bool IsParsing() const
-		//{
-		//	return !m_parsingIsArgValueInvalid;
-		//}
 
 	private:
 		std::string ParseNextArgValue()
